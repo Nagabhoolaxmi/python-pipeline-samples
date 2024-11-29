@@ -87,14 +87,3 @@ pipeline:
                     image: nagabhoolaxmi/harnesstest
                     shell: Sh
                     command: python3 /python-pipeline-samples/app.py
-              - step:
-                  type: Run
-                  name: test connection
-                  identifier: test_connection
-                  spec:
-                    connectorRef: n2dp
-                    image: curlimages/curl:7.73.0
-                    shell: Sh
-                    command: |-
-                      sleep 10
-                      curl localhost:5000
